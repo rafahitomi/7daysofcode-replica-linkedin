@@ -1,0 +1,148 @@
+.navbar {
+  height: 52px;
+  background: var(--fundo-card);
+  padding: 0 6rem;
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar__busca {
+  width: 370px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbar__logo__linkedin {
+  background-image: url('../assets/logo-linkedin.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 34px;
+  height: 34px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.navbar__busca__icone {
+  background-image: url(../assets/icone-busca.svg);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 50px;
+}
+
+.navbar__input {
+  background: var(--input);
+  border: none;
+  border-radius: 0.3rem;
+  padding-left: 2.4rem;
+  width: 280px;
+  height: 34px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.navbar__input::placeholder{
+  color: var(--texto-secundario);
+}
+
+.navbar nav {
+  display: flex;
+}
+
+.navbar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+}
+
+.navbar__item:last-child {
+  margin-left: 0.2rem;
+  border-left: 1px solid var(--texto-secundario);
+}
+
+.navbar__item a {
+  text-align: center;
+  width: 80px;
+  font-size: 0.8rem;
+  color: var(--texto-secundario);
+  transition: color 0.3s ease;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.navbar__item a:hover{
+  color: var(--texto-principal);
+}
+
+.item__icone {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+}
+
+span.inicio {
+  background-image: url('../assets/icone-inicio.svg');
+}
+
+span.minha__rede {
+  background-image: url('../assets/icone-minha-rede.svg');
+}
+
+span.vagas {
+  background-image: url('../assets/icone-vagas.svg');
+}
+
+span.mensagens {
+  background-image: url('../assets/icone-mensagens.svg');
+}
+
+span.notificacoes {
+  background-image: url('../assets/icone-notificacoes.svg');
+}
+
+span.solucoes {
+  background-image: url('../assets/icone-solucoes.svg');
+}
+
+
+/* RESPONSIVIDADE */
+@media(max-width: 1024px){
+  .navbar {
+    padding: 0 4rem;
+  }
+
+  .navbar__input {
+    display: none;
+  }
+
+  .navbar__busca__icone {
+    transform: translate(100%, -20%);
+  }
+
+  .navbar__busca__icone::before {
+    content: "Pesquisar";
+    color: var(--texto-secundario);
+    font-size: 0.75rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-40%, 165%);
+  }
+
+  .navbar__busca__icone::before:hover {
+    color: var(--texto-principal);
+  }
+}
+
+@media(max-width: 680px) {
+  .navbar__busca__icone {
+    display: none;
+  }
+}
