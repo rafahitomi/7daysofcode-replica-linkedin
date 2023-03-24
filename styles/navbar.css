@@ -116,7 +116,7 @@ span.solucoes {
 /* RESPONSIVIDADE */
 @media(max-width: 1024px){
   .navbar {
-    padding: 0 4rem;
+    padding: 0 3.5rem;
   }
 
   .navbar__input {
